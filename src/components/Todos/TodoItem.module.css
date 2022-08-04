@@ -7,7 +7,7 @@
 
   transition: transform 0.2s ease;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 
   /* display: flex;
   flex-flow: row;
@@ -20,15 +20,19 @@
 }
 
 .todotext {
-  grid-column: 1/8;
+  grid-column: 1/6;
   grid-row: 1;
   margin-right: 2rem;
 }
 .todotag {
-  grid-column: 3/8;
+  grid-column: 4/6;
+  grid-row: 1;
+}
+.todo-patch-button {
+  grid-column: 5/6;
   grid-row: 1;
 }
 .todo-delete-button {
-  grid-column: 8/8;
+  grid-column: 6/6;
   grid-row: 1;
 }
