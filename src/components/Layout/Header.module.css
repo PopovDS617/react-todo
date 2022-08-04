@@ -1,0 +1,23 @@
+.header {
+  font-size: 2.5rem;
+  height: 5rem;
+  padding: 5% 5% 1rem;
+  background-color: black;
+  color: #ffe81f;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.title {
+  font-weight: normal;
+}
+
+.button {
+  margin-right: 1rem;
+  background-color: black;
+  color: yellow;
+  border-color: #ffe81f;
+  font-size: 1rem;
+}

@@ -1,0 +1,11 @@
+.todolist {
+  padding: 2% 10%;
+}
+
+ul {
+  list-style: none;
+}
+
+.todolist p {
+  font-size: 2rem;
+}

@@ -1,0 +1,43 @@
+.newtodo {
+  padding: 5% 5% 1% 5%;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+.form {
+  position: relative;
+}
+
+.form input {
+  font: inherit;
+  padding: 0.35rem;
+  border-radius: 4px;
+  background-color: #f0f0f0;
+  border: 1px solid #c1d1d1;
+  display: block;
+  width: 100%;
+  font-size: 2.5rem;
+}
+
+.formbutton {
+  font-size: 2.5rem;
+  height: 100%;
+  margin-left: 1rem;
+  width: 5rem;
+  color: #ffe81f;
+  background-color: black;
+  box-shadow: 0 0 2px 1px #ffe81f;
+  transition: transform 0.2s ease;
+  border-radius: 6px;
+}
+
+.formbutton:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 4px 2px #ffe81f;
+}
+
+.formbutton:disabled {
+  color: gray;
+  box-shadow: 0 0 4px 2px gray;
+}
