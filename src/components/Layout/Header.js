@@ -1,11 +1,11 @@
-import styles from "./Header.module.css";
-import HeaderIcon from "./HeaderIcon";
+import styles from './Header.module.css';
+import HeaderIcon from './HeaderIcon';
 
 const Header = () => {
   return (
     <header className={styles.header}>
       <p className={styles.title}>
-        TO DO - simple as fuck application <HeaderIcon />
+        simple as f todo app <HeaderIcon />
       </p>
 
       <button className={styles.button}>to dark mode</button>

@@ -1,7 +1,7 @@
-import TodoItem from "./TodoItem";
-import styles from "./TodoList.module.css";
-import { useSelector, useDispatch } from "react-redux";
-import { todoActions } from "../../store/todo-slice";
+import TodoItem from './TodoItem';
+import styles from './TodoList.module.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { todoActions } from '../../store/todo-slice';
 
 const TodoList = () => {
   const todoList = useSelector((state) => state.todo.todoList);
@@ -9,8 +9,11 @@ const TodoList = () => {
   const dispatch = useDispatch();
 
   const removeHandler = (id) => {
-    console.log(id);
     dispatch(todoActions.removeTodo({ id: id }));
+  };
+
+  const completeHandler = (id) => {
+    dispatch(todoActions.completeTodo({ id: id }));
   };
 
   let todos;
@@ -20,13 +23,15 @@ const TodoList = () => {
   if (todoList.length >= 1) {
     todos = todoList.map((todo) => {
       return (
-        <li>
+        <li key={todo.key}>
           <TodoItem
+            status={todo.isDone}
             key={todo.key}
             id={todo.id}
             text={todo.text}
             tag={todo.tag}
             removeTodo={removeHandler.bind(null, todo.id)}
+            completeTodo={completeHandler.bind(null, todo.id)}
           />
         </li>
       );

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import styles from "./NewTodo.module.css";
-import { useDispatch } from "react-redux/es/exports";
-import { todoActions } from "../../store/todo-slice";
+import React, { useState } from 'react';
+import styles from './NewTodo.module.css';
+import { useDispatch } from 'react-redux/es/exports';
+import { todoActions } from '../../store/todo-slice';
 
 const NewTodo = () => {
-  const [inputText, setInputText] = useState("");
+  const [inputText, setInputText] = useState('');
   const dispatch = useDispatch();
 
   const textInputHandler = (event) => {
@@ -19,13 +19,13 @@ const NewTodo = () => {
     } else {
       dispatch(
         todoActions.addTodo({
-          id: Math.random().toFixed(2),
-          key: Math.random().toFixed(2),
+          id: Math.random().toFixed(4),
+          key: Math.random().toFixed(4),
           text: inputText,
-          tag: "high",
+          isDone: false,
         })
       );
-      setInputText("");
+      setInputText('');
     }
   };
 

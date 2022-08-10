@@ -1,11 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialTodoState = {
   todoList: [],
 };
 
 const todoSlice = createSlice({
-  name: "todo",
+  name: 'todo',
   initialState: initialTodoState,
   reducers: {
     addTodo(state, action) {
@@ -20,6 +20,20 @@ const todoSlice = createSlice({
       );
 
       state.todoList = filteredTodos;
+    },
+    completeTodo(state, action) {
+      let updatedTodos = [...state.todoList];
+      const todoIndex = updatedTodos.findIndex(
+        (item) => item.id === action.payload.id
+      );
+
+      const existedTodoItem = updatedTodos[todoIndex];
+      const updatedTodoItem = {
+        ...existedTodoItem,
+        isDone: true,
+      };
+      updatedTodos[todoIndex] = updatedTodoItem;
+      state.todoList = updatedTodos;
     },
   },
 });

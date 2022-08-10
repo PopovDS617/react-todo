@@ -6,8 +6,6 @@
   font-size: 1.8rem;
 
   transition: transform 0.2s ease;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
 
   /* display: flex;
   flex-flow: row;
@@ -19,20 +17,6 @@
   box-shadow: 0 0 4px 2px #ffe81f;
 }
 
-.todotext {
-  grid-column: 1/6;
-  grid-row: 1;
-  margin-right: 2rem;
-}
-.todotag {
-  grid-column: 4/6;
-  grid-row: 1;
-}
-.todo-patch-button {
-  grid-column: 5/6;
-  grid-row: 1;
-}
-.todo-delete-button {
-  grid-column: 6/6;
-  grid-row: 1;
+.completed {
+  text-decoration: line-through;
 }
