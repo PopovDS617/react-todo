@@ -6,6 +6,9 @@ ul {
   list-style: none;
 }
 
-.todolist p {
-  font-size: 2rem;
+.notodo {
+  font-size: 45px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: 'Caveat', cursive;
 }

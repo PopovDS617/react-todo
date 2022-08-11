@@ -18,7 +18,7 @@ const TodoList = () => {
 
   let todos;
   if (todoList.length === 0) {
-    todos = <p className={styles.todolist}>no todos</p>;
+    todos = <p className={styles.notodo}> NO TODOS</p>;
   }
   if (todoList.length >= 1) {
     todos = todoList.map((todo) => {

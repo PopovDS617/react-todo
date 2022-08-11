@@ -1,0 +1,22 @@
+.deletedItem {
+  display: flex;
+}
+
+.deletedItemText {
+  font-size: 35px;
+
+  font-family: 'Caveat', cursive;
+  margin: 10px;
+}
+
+.buttonUndo {
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0.3;
+}
+
+.buttonUndo:hover {
+  opacity: 1;
+}

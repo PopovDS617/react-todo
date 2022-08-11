@@ -1,5 +1,11 @@
-.main {
+.main-dark {
   background-color: black;
   color: #ffe81f;
-  height: 100vh;
+  transition: background-color 1s;
+}
+
+.main-light {
+  background-color: white;
+  color: rgb(63, 128, 207);
+  transition: background-color 1s;
 }

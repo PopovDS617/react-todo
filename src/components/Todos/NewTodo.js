@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import styles from './NewTodo.module.css';
-import { useDispatch } from 'react-redux/es/exports';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
 import { todoActions } from '../../store/todo-slice';
 
 const NewTodo = () => {
   const [inputText, setInputText] = useState('');
   const dispatch = useDispatch();
+  const currentTheme = useSelector((state) => state.ui.theme);
+
+  let buttonTheme;
+  if (currentTheme === 'dark') {
+    buttonTheme = `${styles.formbutton} ${styles['formbutton-dark']}`;
+  } else {
+    buttonTheme = `${styles.formbutton} ${styles['formbutton-light']}`;
+  }
 
   const textInputHandler = (event) => {
     setInputText(event.target.value);
@@ -21,7 +29,7 @@ const NewTodo = () => {
         todoActions.addTodo({
           id: Math.random().toFixed(4),
           key: Math.random().toFixed(4),
-          text: inputText,
+          text: inputText.toUpperCase(),
           isDone: false,
         })
       );
@@ -42,7 +50,7 @@ const NewTodo = () => {
           />
         </div>
         <div className={styles.action}>
-          <button className={styles.formbutton} disabled={!inputText}>
+          <button className={buttonTheme} disabled={!inputText}>
             add
           </button>
         </div>

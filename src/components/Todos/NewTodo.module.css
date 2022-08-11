@@ -1,40 +1,58 @@
 .newtodo {
-  padding: 5% 5% 1% 5%;
+  padding: 40px 40px 60px 40px;
   display: flex;
   flex-flow: row;
   justify-content: center;
   align-items: center;
 }
 .form {
-  position: relative;
+  display: flex;
 }
 
 .form input {
   font: inherit;
-  padding: 0.35rem;
+
   border-radius: 4px;
   background-color: #f0f0f0;
   border: 1px solid #c1d1d1;
   display: block;
   width: 100%;
-  font-size: 2.5rem;
+  font-size: 35px;
 }
 
 .formbutton {
-  font-size: 2.5rem;
+  font-size: 30px;
   height: 100%;
-  margin-left: 1rem;
-  width: 5rem;
-  color: #ffe81f;
-  background-color: black;
+  margin-left: 20px;
+  width: 100px;
+
   box-shadow: 0 0 2px 1px #ffe81f;
   transition: transform 0.2s ease;
+  font-family: 'Fuzzy Bubbles', cursive;
   border-radius: 6px;
 }
 
-.formbutton:hover {
+.formbutton-dark {
+  color: #ffe81f;
+  background-color: black;
+  box-shadow: 0 0 2px 1px #ffe81f;
+  transition: background-color 1s;
+}
+.formbutton-light {
+  background-color: white;
+  color: rgb(63, 128, 207);
+  box-shadow: 0 0 2px 1px rgb(63, 128, 207);
+  transition: background-color 1s;
+}
+
+.formbutton-dark:hover {
   transform: scale(1.03);
   box-shadow: 0 0 4px 2px #ffe81f;
+}
+
+.formbutton-light:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 2px 1px rgb(63, 128, 207);
 }
 
 .formbutton:disabled {
