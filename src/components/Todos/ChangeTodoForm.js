@@ -25,3 +25,5 @@ const ChangeTodoForm = (props) => {
 };
 
 export default ChangeTodoForm;
+
+//add 2 buttons and onBlur logics
